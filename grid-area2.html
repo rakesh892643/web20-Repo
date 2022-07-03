@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geid-area2</title>
+    <style>
+        #bad{
+            background-color: black;
+        }
+        #parent{
+            width: 75%;
+            height: 400px;
+            margin: auto;
+            margin-top: 80px;
+            display: flex;
+            background-color: white;
+
+        }
+        #parent>div:nth-child(1){
+           
+            width: 75%;
+            margin:50px 30px ;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,120px);
+            gap:20px;
+            grid-template-areas:
+            "a a b"
+            "c d b"         
+        }
+        #parent>div:nth-child(2){
+            width:20%;
+            height: 280px;
+            margin-top: 50px;
+            margin-right: 70px;
+            background-color:rgb(68, 67, 67);
+            border-radius: 10px;
+        }
+        #parent>div>p{
+            color: white;
+            font-size: 25px;
+            padding-left: 25px;
+          
+        }
+        #parent>div>div{
+            background-color: rgb(68, 67, 67);
+            border-radius: 10px;
+        }
+        #parent>div>div:nth-child(1){
+            color:white;
+            font-size: 25px;
+            padding:25px 25px;
+            grid-area: a;
+        }
+        #parent>div>div:nth-child(2){
+            color:white;
+            font-size: 25px;
+            padding:25px 25px;
+            grid-area: b;
+        }
+        #parent>div>div:nth-child(3){
+            color:white;
+            font-size: 25px;
+            padding:25px 25px;
+            grid-area: c;
+        }
+        #parent>div>div:nth-child(4){
+            color:white;
+            font-size: 25px;
+            padding:25px 25px;
+            grid-area: d;
+        }
+        
+        
+        
+    </style>
+</head>
+<body id="bad">
+    <div id="parent">  
+        <div>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+           
+        </div>
+        <div>
+            <p>E</p>
+        </div>
+           
+    </div>
+</body>
+</html>
